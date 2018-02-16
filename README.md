@@ -1,6 +1,6 @@
 # Magento2 Configurable Products PreSelected
 
-Select an associated item of configurable product, which you would like to show by default. Attract customers and simplify their shopping by showing appropriate combinations on their cart.
+Select an associated product of configurable product, which you would like to show by default. Attract customers and simplify their shopping by showing appropriate combinations on their cart. 
 
 Features
 <ul>
