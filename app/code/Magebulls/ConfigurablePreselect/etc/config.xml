@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <configurable_preselect_config>
+        	<configurable_preselect_settings>
+                <enable>1</enable>
+            </configurable_preselect_settings>
+            <configurable_preselect_first_options>
+                <first_options_status>1</first_options_status>
+            </configurable_preselect_first_options>
+
+            <configurable_preselect_general_setting>
+            	<update_page_url>1</update_page_url>
+            	
+            	<update_product_name>1</update_product_name>
+            	<product_name_position>.page-title .base</product_name_position>
+
+            	<update_product_sku>1</update_product_sku>
+            	<product_sku_position>.product-info-stock-sku .value</product_sku_position>
+
+            	<update_product_short_description>1</update_product_short_description>
+            	<product_short_description_position>.product.attribute.overview .value</product_short_description_position>
+
+				<update_product_description>1</update_product_description>
+				<product_description_position>.product.attribute.description .value</product_description_position>
+
+				<update_more_information_block>1</update_more_information_block>
+				<update_more_information_block_position>.additional-attributes-wrapper</update_more_information_block_position>
+
+            </configurable_preselect_general_setting>
+        </configurable_preselect_config>
+    </default>
+</config>

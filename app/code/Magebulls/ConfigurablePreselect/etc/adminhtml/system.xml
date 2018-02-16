@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magebulls" translate="label" sortOrder="1">
+            <label>Magebulls</label>
+        </tab>
+        <section id="configurable_preselect_config" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>magebulls</tab>
+            <label>Configurable Preselect</label>
+            <resource>Magebulls_ConfigurablePreselect::magebulls_configurablepreselect_config</resource>
+            <group id="configurable_preselect_settings" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configurable Preselect</label>
+				<field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>				
+            </group>
+            <group id="configurable_preselect_first_options" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configurable Preselect First Option</label>
+                <field id="first_options_status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                                  
+            </group>
+            <group id="configurable_preselect_general_setting" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General setting</label>
+
+                <field id="update_page_url" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Update page url</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> 
+
+                <field id="update_product_name" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Update product name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>  
+                <field id="product_name_position" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product name position</label>
+                </field>                                   
+                
+                <field id="update_product_sku" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Update product sku</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>  
+
+                <field id="product_sku_position" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product sku position</label>
+                </field>                                   
+
+                <field id="update_product_short_description" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Update product short description</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>  
+
+                <field id="product_short_description_position" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product short description position</label>
+                </field>                                   
+
+                <field id="update_product_description" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Update product description</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>  
+
+                <field id="product_description_position" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product description position</label>
+                </field>  
+
+                <field id="update_more_information_block" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Update "More Information" block</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>  
+
+                <field id="update_more_information_block_position" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>"More Information" block position</label>
+                </field>   
+            </group>
+        </section>
+    </system>
+</config>

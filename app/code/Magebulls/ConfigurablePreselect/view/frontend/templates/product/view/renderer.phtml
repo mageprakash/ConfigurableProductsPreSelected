@@ -1,0 +1,54 @@
+<?php
+/**
+ * @category Magebulls ConfigurablePreselect
+ * @package Magebulls_ConfigurablePreselect
+ * @copyright Copyright (c) 2017 Magebulls
+ * @author Magebulls Team <info@magebulls.com>
+ */
+?>
+<?php /** @var $block \Magento\Swatches\Block\Product\Renderer\Configurable */ ?>
+
+<div class="swatch-opt" data-role="swatch-options"></div>
+<?php $isEnable = $block->getStoreConfig('configurable_preselect_config/configurable_preselect_settings/enable'); ?>
+<?php if($isEnable && $block->getPreselectOptionId()) { ?>
+<script type="text/x-magento-init">
+    {
+        "[data-role=swatch-options]": {
+            "Magento_Swatches/js/swatch-renderer": {
+                "jsonConfig": <?= /* @escapeNotVerified */ $swatchOptions = $block->getJsonConfig() ?>,
+                "jsonSwatchConfig": <?php /* @escapeNotVerified */
+                    echo $swatchOptions = $block->getJsonSwatchConfig(); ?>,
+                "mediaCallback": "<?= /* @escapeNotVerified */ $block->getMediaCallback() ?>",
+                "gallerySwitchStrategy": "<?php /* @escapeNotVerified */ echo $block->getVar('gallery_switch_strategy',
+                    'Magento_ConfigurableProduct') ?: 'replace'; ?>",
+                "preSelectedOption": <?php echo $block->getPreselectOptionId() ?>, 
+				"updateProductName": <?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/update_product_name') ?> ,
+				"productNamePosition": "<?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/product_name_position') ?>",
+				"updateProductSku": <?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/update_product_sku') ?> ,
+				"productSkuPosition":"<?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/product_sku_position') ?>",
+				"updateProductShortDescription": <?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/update_product_short_description') ?> ,
+				"productShortDescriptionPosition":"<?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/product_short_description_position') ?>",
+				"updateProductDescription": <?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/update_product_description') ?> ,
+				"productDescriptionPosition":"<?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/product_description_position') ?>",
+				"updateMoreInformationBlock": <?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/update_more_information_block') ?> ,
+				"updateMoreInformationBlock_position":"<?php echo $block->getStoreConfig('configurable_preselect_config/configurable_preselect_general_setting/update_more_information_block_position') ?>"
+            }
+        }
+    }
+</script>
+<?php } else { ?>
+	<script type="text/x-magento-init">
+	    {
+	        "[data-role=swatch-options]": {
+	            "Magento_Swatches/js/swatch-renderer": {
+	                "jsonConfig": <?= /* @escapeNotVerified */ $swatchOptions = $block->getJsonConfig() ?>,
+	                "jsonSwatchConfig": <?php /* @escapeNotVerified */
+	                    echo $swatchOptions = $block->getJsonSwatchConfig(); ?>,
+	                "mediaCallback": "<?= /* @escapeNotVerified */ $block->getMediaCallback() ?>",
+	                "gallerySwitchStrategy": "<?php /* @escapeNotVerified */ echo $block->getVar('gallery_switch_strategy',
+	                    'Magento_ConfigurableProduct') ?: 'replace'; ?>"
+	            }
+	        }
+	    }
+	</script>
+<?php } ?>

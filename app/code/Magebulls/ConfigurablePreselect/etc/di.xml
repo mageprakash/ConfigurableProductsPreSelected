@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magento\Ui\Component\Form" type="Magebulls\ConfigurablePreselect\Ui\Form" />
+	<preference for="Magento\Swatches\Block\Product\Renderer\Configurable" type="Magebulls\ConfigurablePreselect\Block\Product\Renderer\Configurable" />
+	<preference for="Magento\ConfigurableProduct\Ui\DataProvider\Product\Form\Modifier\ConfigurablePanel" type="Magebulls\ConfigurablePreselect\Ui\DataProvider\Product\Form\Modifier\ConfigurablePanel" />
+	<type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+		<plugin name="Magento-ConfigurableProduct-Block-product-View-Type-Configurable" type="Magebulls\ConfigurablePreselect\Plugin\Product\View\Type\ConfigurablePlugin" sortOrder="1" />
+	</type>
+	<type name="Magento\ConfigurableProduct\Model\Product\Type\Configurable">
+		<plugin name="Magento-ConfigurableProduct-Model-product-Type" type="Magebulls\ConfigurablePreselect\Plugin\Product\Type\ConfigurablePlugin" sortOrder="1" />
+	</type>
+</config>
+

@@ -1,0 +1,20 @@
+{
+    "name": "magebulls/module-configurablepreselect",
+    "description": "N/A",
+    "type": "magento2-module",
+    "version": "101.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~5.6.0|7.0.2|~7.0.6",
+        "magento/framework": "100.1.*"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Magebulls\\ConfigurablePreselect\\": ""
+        }
+    }
+}
