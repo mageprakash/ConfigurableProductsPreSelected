@@ -1,4 +1,3 @@
-<img src='https://raw.githubusercontent.com/prakash282/ConfigurableProductsPreSelected/master/magebull.png' name='Magebull logo'/>
 
 # Magento2 Configurable Products PreSelected
 
